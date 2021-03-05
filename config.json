@@ -5,6 +5,8 @@
     ],
     "//seasons": "including the current season",
     "seasons": [
-        1
+        1,
+        2,
+        3
     ]
 }
