@@ -90,7 +90,7 @@ function buildStats(data) {
 
         let allPlayers = new Set(Object.keys(players))
         // Two player names
-        let impostors = new Set(game.slice(10, 12))
+        let impostors = new Set(game.slice(10, 12).filter(isEmpty))
 
         let crew = new Set(
             [...playersInGame].filter(name => !impostors.has(name))
