@@ -87,18 +87,10 @@ function buildStats(data) {
     data.values.forEach(game => {
         // Nine or ten player names
         let playersInGame = new Set(game.slice(0, 10).filter(isEmpty))
-        if (playersInGame.size < 9) {
-            console.error("Bad number of players", playersInGame.size)
-            return
-        }
 
         let allPlayers = new Set(Object.keys(players))
         // Two player names
         let impostors = new Set(game.slice(10, 12))
-        if (impostors.size < 2) {
-            console.error("Bad number of impostors", impostors)
-            return
-        }
 
         let crew = new Set(
             [...playersInGame].filter(name => !impostors.has(name))
